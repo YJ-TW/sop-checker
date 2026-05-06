@@ -24,8 +24,9 @@ sessions = {}
 
 @app.route('/')
 def index():
-    with open('/home/claude/sop-checker/templates/index.html', 'r', encoding='utf-8') as f:
-        return f.read()
+with open('/home/claude/sop-checker/templates/index.html', 'r', encoding='utf-8') as f:
+    html = f.read()
+return html
 
 
 @app.route('/api/upload', methods=['POST'])
